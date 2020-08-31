@@ -1,0 +1,35 @@
+:#!/usr/bin/env python
+# read data from keyboard, check and print
+# refers to memo python HS86 recipe 3 
+
+error = True
+while error:
+  try:
+    entier = int(input('Enter an integer : '))
+    error = False
+  except:
+     print('was waiting for an int!')
+# print with format 
+print('Integer is : {}'.format(entier))
+
+chaine = input('Give a phrase : ')
+print('String is: {}'.format(chaine))
+
+error = True
+while error:
+  try:
+    #  input is splitted with "," then convertir in float. map is there to apply float to all elements of list
+    real = list(map(float, input('Give some reals separated by a comma : ').split(',')))
+    # can be more clearly set with:
+    #saisie = input('Give some reals separated by a comma : ')
+    #saisie_list = saisie.split(',')
+    #liste_reals = map(float, saisie_list)
+    #real = list(liste_reals)
+    error = False
+  except:
+    print('Error during writting on keyboard')
+print('Liste of reals : {}'.format(real))
+
+print( "[ {} la {} ]".format( "c'est", "fin" ))
+
+

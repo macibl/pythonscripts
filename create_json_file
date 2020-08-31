@@ -1,0 +1,23 @@
+#!/usr/bin/env python
+
+
+import json
+
+data = {
+  'series': {
+    'Dortor Who': {
+      'Characters': [
+        'Doctor Who',
+        'Rose Tyler',
+        'Mickey Smith'
+      ]
+    }
+  }
+}
+
+try:
+  with open('series.json', 'w') as fic:
+    fic.write(json.dumps(data, indent=4))
+except:
+  print('Error during file creation')
+  exit(1)
